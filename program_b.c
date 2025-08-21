@@ -3,7 +3,7 @@
 #include <signal.h>
 #include <sys/types.h>
 
-int main() {
+int main(int argc, char* argv[]) {
     //Get program argument
     pid_t pid = atoi(argv[1]);
 
@@ -12,5 +12,6 @@ int main() {
 
     //Print message and exit
     printf("Sent signal to process %d\n", pid);
+
     return 0;
 }

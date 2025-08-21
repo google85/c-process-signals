@@ -3,19 +3,26 @@
 
 
 ### Usage:
+> Create ./bin folder:
+```
+mkdir -p ./bin
+```
+
 > Compile **program_a**:
 ```bash
-gcc program_a.c -o program_a
+gcc program_a.c -o ./bin/program_a
 ```
+
 > Compile **program_b**:
 ```bash
-gcc program_b.c -o program_b
+gcc program_b.c -o ./bin/program_b
 ```
+
 > Run in parallel and use **pid** from **program_a** as parameter in **program_b**
 ```bash
-./program_a
+./bin/program_a
 ```
 
 ```bash
-./program_b 1234
+./bin/program_b 1234
 ```
