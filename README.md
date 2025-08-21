@@ -3,14 +3,19 @@
 
 
 ### Usage:
-> Create ./bin folder:
-```
+> Prerequisites:
+```bash
+# Create ./bin folder:
 mkdir -p ./bin
+# Install libraries:
+sudo apt-get install libsdl2-dev libsdl2-mixer-dev
 ```
 
 > Compile **program_a**:
 ```bash
 gcc program_a.c -o ./bin/program_a
+# with SDL2 library for audio:
+gcc -o ./bin/program_a program_a.c play_audio.c -lSDL2 -lSDL2_mixer
 ```
 
 > Compile **program_b**:

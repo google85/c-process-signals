@@ -2,9 +2,11 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <signal.h>
+#include "play_audio.h"
 
 void handler_sigint(int sig) {
-    printf("\nPlay audio meow.mp3!\n");
+    play_audio("meow.mp3");
+    // printf("\nPlay audio meow.mp3!\n");
 }
 
 void handle_sigusr1(int sig) {
