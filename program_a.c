@@ -1,8 +1,16 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <signal.h>
+
+void handle_sigusr1(int sig) {
+    printf("\nReceived SIGUSR1 signal! Continuing...\n");
+}
 
 int main(void) {
+    //Install the SIGUSR1 handler
+    signal(SIGUSR1, handle_sigusr1);
+
     //Print the process id
     printf("Process ID: %d\n", getpid());
 
